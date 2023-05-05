@@ -46,7 +46,7 @@
 /*********** Es: 2 ****************/
 
 function personInfo(obj) {
-   return `La ragazza ${obj.name} è ${obj.job}$$`;
+   return `${obj.name} è una ${obj.job}`;
 }
 
 let person = {
