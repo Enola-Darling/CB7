@@ -2,21 +2,25 @@
 
 /****************Es: 1*******************/
 
-const divTest = document.querySelector(".test");
+const divTest = document.querySelector('.test-container');
+const message = document.createElement('p');
+const button = document.querySelector('.btn-toggle-message');
 
-const paragrafo = document.createElement("p");
-paragrafo.className = "testo";
+message.textContent = 'Benvenuto nel nostro sito web!';
 
-
-function clickBtn() {
-  paragrafo.textContent = "Ciao! Benvenuto nel nostro sito web!";
-  divTest.appendChild(paragrafo);
-  divTest.classList.add("active");
+function showMessage() {
+  divTest.classList.add('active');
+  divTest.appendChild(message);
 }
 
-const button = document.querySelector(".btn");
+function hideMessage() {
+  message.remove();
+  divTest.classList.remove('active')
+}
 
-button.addEventListener("click", clickBtn);
+button.addEventListener('click', function() {
+  divTest.classList.contains('active') ? hideMessage() : showMessage();
+});
 
 /*****************************************/
 
