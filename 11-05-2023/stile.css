@@ -1,0 +1,17 @@
+
+.container-wrapper{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.card {
+    border: 1px solid;
+    border-radius: 8px;
+    min-height: 250px;
+    background-color: rgb(192,192,192);
+}
+
+.text_container{
+    text-align: center;
+}
