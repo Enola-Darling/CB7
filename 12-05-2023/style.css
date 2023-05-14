@@ -1,0 +1,55 @@
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  width: 500px;
+}
+
+.carousel_item {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background: grey;
+  color: #ffffff;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.dots {
+  display: flex;
+  gap: 15px;
+}
+
+.carousel_dot {
+  width: 10px;
+  height: 10px;
+  align-items: center;
+  background: rgb(203, 204, 204);
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.carousel_dot.active {
+  background: rgb(8, 114, 114);
+}
+
+.buttons {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  text-decoration: dotted;
+  text-shadow: 2px 1px 6px black;
+  cursor: pointer;
+}
