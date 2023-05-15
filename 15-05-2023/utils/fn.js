@@ -1,8 +1,9 @@
-export const cE = (el) => document.createElement(el);
-export const qS = (el) => document.querySelector(el);
+export const cE = document.createElement;
+export const qS = document.querySelector;
 
 export const createProduct = (data) => {
     const wrapperEl = cE ("div");
+    const textWrapperEl = cE ("div");
     const imageEl = cE ("img");
     const titleEl = cE ("h3");
     const priceEl = cE ("h3")
@@ -11,6 +12,7 @@ export const createProduct = (data) => {
     const buttonEl = cE ("button");
 
     wrapperEl.className = "productCard";
+    textWrapperEl.className = "productCard__text";
     imageEl.src = data.thumbnail;
     imageEl.alt = data.title;
     titleEl.textContent = data.title;
@@ -19,7 +21,8 @@ export const createProduct = (data) => {
     ratingEl.textContent = data.rating;
     buttonEl.textContent = "Add to Cart";
 
-    wrapperEl.append (imageEl, titleEl, priceEl, descriptionEl, ratingEl, buttonEl);
+    textWrapperEl.append (titleEl, priceEl, descriptionEl, ratingEl, buttonEl);
+    wrapperEl.append (imageEl,textWrapperEl);
 
 
     return wrapperEl;

@@ -20,5 +20,17 @@ const productMock = {
         ],
 };
 
-const rootEl = qS ("#root");
-rootEl.append(createProduct(productMock));
+const rootEl = qS("#root");
+const productList = cE("div");
+const productListTitle = cE("h1");
+
+productList.className = "productList";
+productListTitle.textContent = "Product for you!";
+
+// productList.append(createProduct(productMock));
+fetch("https://dummyjson.com/product")
+    .then((res)  => res.json())
+    .then((data) => data.products.forEach(product => productList.append(createProduct(product))));
+
+
+rootEl.append(productListTitle,productList);
