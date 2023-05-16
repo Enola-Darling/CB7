@@ -27,6 +27,8 @@ export const createProduct = (data) => {
     textWrapperEl.append (titleEl, priceEl, descriptionEl, ratingEl, buttonEl);
     wrapperEl.append (imageEl,textWrapperEl);
 
+    wrapperEl.dataset.productId = data.id;
+
     return wrapperEl;
 };
 
@@ -34,6 +36,7 @@ export const createProduct = (data) => {
     // Sezione prodotto (modale)
 
     export const createProductModal = (productData, parent = null) => {
+        console.log(productData)
         const wrapperEl = cE("div");
         const overlayEl = cE("div");
         const galleryEl = cE("div");

@@ -34,21 +34,34 @@ rootEl.append(productListTitle,productList);
 fetch("https://dummyjson.com/product")
     .then((res)  => res.json())
     .then((data) => { 
-        data.products.forEach((product) => 
-        productList.append(createProduct(product))
-        );   
+        data.products.forEach((product) => productList.append(createProduct(product)));
+        return data.products;
     })
-    .then(() => {
+    // Sol. 1 (w/o request)
+/*    .then((products) => {
+        console.log(products);
         const productCardEls = qSA(".productCard");
         console.log(productCardEls);
-      
-        productCardEls.forEach((product) => {
-          product.addEventListener("click", () => {
-            fetch(`https://dummyjson.com/product/${product.id}`)
-              .then((res) => res.json())
-              .then((data) => rootEl.append(createProductModal(data, rootEl)));
+        productCardEls.forEach((productEl) => {
+          productEl.addEventListener("click", () => {
+            console.log(productEl)
+            const product = products.find((p) => p.id == productEl.dataset.productId);
+            console.log(product);
+            rootEl.append(createProductModal(product, rootEl));
+
           });
         });
+      });*/
+      .then(() => {
+        const productCardEls = qSA(".productCard");
+        productCardEls.forEach((productEl) => {
+          productEl.addEventListener("click", () => {
+            console.log(productEl);
+            fetch(`https://dummyjson.com/product/${productEl.dataset.productId}`)
+              .then((res) => res.json())
+              .then((data) => rootEl.append(createProductModal(data, rootEl)));
+          })
+        })
       });
 
 // Sezione singolo prodotto//
