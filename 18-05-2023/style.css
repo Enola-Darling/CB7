@@ -32,6 +32,8 @@ body {
 
 .navbar__user .cart {
   cursor: pointer;
+  border: 0;
+
 }
 
 .navbar__user .cart::after {
@@ -206,6 +208,8 @@ body {
 /* Cart Modal */
 
 .cartModal{
+  display: flex;
+  flex-direction: column;
     position: absolute;
     top: 70px;
     right: 0;
@@ -214,10 +218,14 @@ body {
     border: 2px solid;
     background-color: white;
     border-left: 2px solid;
-    transform: translateX(-1600px);
+    /*transform: translateX(-1600px);*/
     transition: all 0.35s;
 }
 
 .cardModal__active{
   transform: translateX(0);
+}
+
+.cart__close-button {
+  color: white;
 }

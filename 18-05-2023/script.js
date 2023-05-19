@@ -1,4 +1,11 @@
-import { cE, qS, qSA, createProduct, createProductModal, createCartModal } from "./utils/fn.js";
+import {
+  cE,
+  qS,
+  qSA,
+  createProduct,
+  createProductModal,
+  createCartModal,
+} from "./utils/fn.js";
 
 const productMock = {
   id: 1,
@@ -87,9 +94,8 @@ searchProductEl.addEventListener("input", (evt) => {
 });
 
 cartEl.addEventListener("click", () => {
-  rootEl.append(createCartModal(cartItems, rootEl));
-  const cartModal = qS(".cartModal");
-
+  const cartModalEl = createCartModal(cartEl);
+  rootEl.append(cartModalEl);
   cartEl.disabled = true;
-  cartModal.classList.add("cartModal__active");
+  //cartModalEl.classList.add("cartModal__active");
 });
