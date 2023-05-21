@@ -148,7 +148,7 @@ export const createLogIn = () => {
       navbarEl.style.display = "flex";
       heroEl.style.display = "flex";
       rootEl.append(productListTitle, productList);
-      rootEl.removeChild(wrapperEl);
+      rootEl.removeChild(wrapperEl, productList);
     } else {
       alert("Username e/o password non corretta");
     }

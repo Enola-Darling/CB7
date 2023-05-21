@@ -41,7 +41,9 @@ export let cartItems = [];
 
 productList.className = "productList";
 productListTitle.textContent = "Product for you!";
-rootEl.append(productListTitle, productList);
+navbarEl.style.display = "none";
+heroEl.style.display = "none";
+// rootEl.append(productListTitle, productList);
 rootEl.append(createLogIn());
 // ASYNC
 
