@@ -27,6 +27,7 @@ button.addEventListener("click", (e) => {
 
 const displayCart = (cart) => {
   console.log(cart);
+  document.body.textContent =""
 
   const cartModal = document.createElement("div");
   cartModal.classList.add("modal", "cart_modal");
