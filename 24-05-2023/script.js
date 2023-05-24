@@ -18,10 +18,6 @@
 
 // const { title, author, year } = bookData;
 
-// const title = bookData.title;
-// const author = bookData.author;
-// const year = bookData.year;
-
 // console.log(title); // Output: Il Nome della Rosa
 // console.log(author); // Output: Umberto Eco
 // console.log(year); // Output: 1980
