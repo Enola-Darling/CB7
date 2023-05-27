@@ -66,6 +66,7 @@ elements.addButton.addEventListener("click", () => {
     text: elements.addItemInput.value,
     id: Math.max(0, ...todoItems.map(e => e.id)) + 1 
   };
+  elements.addItemInput.value = ""
   todoItems.push(item);
   storeTodoItems();
   createTodoElement(item, elements.todoList);
