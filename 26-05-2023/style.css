@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+}
+
+*{
+  justify-content: center;
+
+}
+
+.list_modal {
+ background-color:rgb(105, 84, 84);
+ padding: 12px;
+ border-radius: 12px;
+ width: 350px;
+
+
+}
+.text_input {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.add_section{
+  display: flex;
+}
+
+.Add_button  {
+  margin-left: 20px;
+}
