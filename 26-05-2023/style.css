@@ -3,7 +3,6 @@ body{
   justify-content: center;
   align-items: center;
   margin: 0;
-  
 }
 
 *{
@@ -16,15 +15,28 @@ body{
  padding: 12px;
  border-radius: 12px;
  width: 350px;
-
-
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
+
+.list_wrapper {
+
+  
+}
+.todo_list{
+  display: flex;
+  flex-direction: column;
+}
+
 .text_input {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
   transition: border-color 0.2s ease;
+  margin-bottom: 20px;
 }
 
 .add_section{
@@ -33,4 +45,5 @@ body{
 
 .Add_button  {
   margin-left: 20px;
+  margin-bottom: 20px;
 }
