@@ -6,13 +6,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.content {}
 
-.sidebar {}
-
-.mainContent {
-    height: 300vh;
-}
 
 /* media query mobile and tablet */
 @media screen and (max-width: 1024px) {
@@ -35,22 +29,22 @@
     }
 
     .mainContent {
-        width: 80%;
+        width: 75%;
         display: flex;
         justify-content: space-between;
     }
 
     .content {
-        width: 70%;
+        width: 60%;
        
     }
 
     .sidebar  {
-        width: 30%;
+        width: 40%;
     }
 }
 
-.header {
+/* .header {
     width: 20%;
     background-color: yellow;
 }
@@ -61,4 +55,4 @@
 
 .siderbar {
 width: 80%,
-}
+} */
