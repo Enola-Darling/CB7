@@ -11,13 +11,15 @@ export const tweetGen = (tweetData) => {
     const imagePlaceholder = ("https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg");
 
     wrapperEl.className = "tweet";
+    nameEl.textContent = tweetData.user?.firstName;
+    userNameEl.textContent = tweetData.user?.userusername;
     userImageEl.src = tweetData.user?.image || imagePlaceholder;
     userImageEl.alt = tweetData.user?.username;
 
     contentEl.className = "tweet__content";
   
-    nameEl.textContent = tweetData.user?.firstName;
-    userNameEl.textContent = tweetData.userusername;
+    
+    
     textContentEl.textContent = tweetData.body;
     reactionsEl.textContent = tweetData.reactions;
   

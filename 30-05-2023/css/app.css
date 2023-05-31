@@ -1,8 +1,9 @@
-  @import"./reset.css";
-  @import"./variables.css";
-  @import"./layout.css";
-  @import"./header.css";
-  @import"./content.css";
+  @import "./reset.css";
+  @import "./variables.css";
+  @import "./layout.css";
+  @import "./header.css";
+  @import "./content.css";
+  @import "./siderbar.css";               
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap');
 

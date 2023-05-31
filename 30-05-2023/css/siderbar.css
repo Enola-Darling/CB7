@@ -1,0 +1,53 @@
+
+.tweetTrend__wrapper {
+    width: 40%;
+    padding-left: 40px;  
+}   
+
+.sidebarTitle {
+    margin-top: 20px;
+}
+
+.inputSearch {
+    margin: 0;
+    background: transparent;
+    font: 13px sans-serif;
+    border: 2px solid;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tweetTrend__content {
+    display: flex;
+    background-color: rgba(239, 243, 244) ;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.tweeTrend__List{
+    display: flex;
+    align-items: start;    
+}
+
+.tweetTrend__Text h3{
+    font-weight: lighter;
+}
+
+.tweetTrend__Text {
+    
+}
+
+.TrendsIcon {
+    width: 24px;
+    height: auto;
+    margin-left: 90px;
+}
+
+.tweetTrend__content li {
+    list-style-type: none; 
+
+}
+
+
